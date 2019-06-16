@@ -13,21 +13,24 @@
   <header>
     <section class="section navbar">
       <div class="container">
+        <h1 class="visually-hidden">Меню компании</h1>
         <div class="navbar-block">
 
           <div class="navbar__menu">
             <div class="navbar__logo">
-              <img src="img/navbar/logo.png" alt="логотип компании">
+              <a href="#"><img src="img/navbar/logo.png" alt="логотип компании"></a>
             </div>
             <!-- /.navbar__logo -->
-            <ul class="navbar__links">
+            <ul class="navbar__links" id="menu-active">
               <li><a href="#" class="navbar-link">Услуги</a></li>
               <li><a href="#" class="navbar-link">Цены</a></li>
               <li><a href="#" class="navbar-link">Отзывы</a></li>
               <li><a href="#" class="navbar-link">Новости</a></li>
               <li><a href="#" class="navbar-link">Контакты</a></li>
+
             </ul>
             <!-- /.navbar__links -->
+            <a href="#" class="navbar__menu-active" id="button-active"><span>&#9776;</span></a>
           </div>
 
           <div class="navbar__contacts">
@@ -36,7 +39,6 @@
               <a href="tel:+78633422221" class="navbar-phone__link">+7 (863) <b>342-22-21</b></a>
             </div>
             <button class="button navbar-button">Заказать звонок</button>
-
           </div>
 
         </div>
@@ -52,6 +54,8 @@
   <main>
 
   </main>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 

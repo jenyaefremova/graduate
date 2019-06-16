@@ -376,17 +376,53 @@ ul, li {
 a {
   text-decoration: none;
   color: #000000;
+  outline: 0;
 }
 
 .container {
-  max-width: 1170px;
-  width: 100%;
+  width: 1170px;
   margin: auto;
 }
 
 .button {
   border: none;
-  background-color: #ffffff;
+  outline: 0;
+}
+
+.button:hover {
+  background-color: #ffd333;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 580px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    max-width: 550px;
+    width: 90%;
+  }
 }
 
 /*Подключение стилей секции навигационного меню*/
@@ -420,22 +456,32 @@ a {
       flex-basis: 61%;
 }
 
+.navbar__menu-active {
+  display: none;
+}
+
+.navbar__menu-active span {
+  font-size: 25px;
+}
+
 .navbar__links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+}
+
+.navbar__links-active {
+  display: none;
 }
 
 .navbar__links li {
   padding: 0 25px 0 30px;
-  position: relative;
-  /* &:after
-        position: absolute
-        width: 1px
-        height: 12px
-        color: $text-color
-        top: 0
-        right: 0 */
+  border-right: 1px solid #f1f1f1;
+}
+
+.navbar__links li:last-child {
+  border: none;
 }
 
 .navbar-link {
@@ -469,5 +515,72 @@ a {
   padding: 12px 15px 10px;
   font-size: 14px;
   font-weight: 600;
+  /*Медиа запросы*/
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    background: #ffffff;
+  }
+  .navbar__menu {
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+  }
+  .navbar__logo {
+    margin-right: 20px;
+  }
+  .navbar__links li {
+    padding: 0 5px 0 10px;
+  }
+  .navbar-phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar-phone__link {
+    font-size: 14px;
+  }
+  .navbar-button {
+    margin-left: 5px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar__menu-active {
+    display: block;
+  }
+  .navbar__links {
+    display: none;
+  }
+  .navbar__links-active {
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: 11%;
+    width: 100%;
+  }
+  .navbar__links-active li {
+    border: none;
+    padding: 12px;
+  }
+  .navbar-phone__icon {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .navbar-phone__link {
+    display: none;
+  }
+  .navbar__links-active {
+    left: 0;
+  }
+  .navbar__links-active li {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */

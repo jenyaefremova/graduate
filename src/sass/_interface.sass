@@ -9,10 +9,31 @@ ul,li
 a
   text-decoration: none
   color: $text-color
+  outline: 0
 .container
-  max-width: 1170px
-  width: 100%
+  width: 1170px
   margin: auto
 .button
-  border: none
-  background-color: #ffffff
+  border: none  
+  outline: 0
+  &:hover
+    background-color: lighten($main-color, 10)
+    cursor: pointer
+.visually-hidden
+  display: none
+
+@media (max-width: 1200px)
+  .container
+    width: 970px
+@media (max-width: 992px)
+  .container
+    max-width: 750px
+    width: 90%
+@media (max-width: 768px)
+  .container
+    max-width: 580px
+    width: 90%
+@media (max-width: 575px)
+  .container
+    max-width: 550px
+    width: 90%

@@ -1,7 +1,7 @@
 .navbar
   padding-top: 5px
   padding-bottom: 8px  
-  background: linear-gradient(to right, #ffffff 60%, #f1f1f1 40%)
+  background: linear-gradient(to right, #ffffff 60%, #f1f1f1 40%)  
   &-block
     display: flex
     justify-content: space-between
@@ -10,23 +10,23 @@
     align-items: center
     justify-content: space-between
     flex-basis: 61%
+    &-active
+      display: none      
+      span
+        font-size: 25px
   &__links
     display: flex
+    position: relative
+    &-active
+      display: none      
     li
       padding: 0 25px 0 30px
-      position: relative  
-      /* &:after
-        position: absolute
-        width: 1px
-        height: 12px
-        color: $text-color
-        top: 0
-        right: 0 */
-          
+      border-right: 1px solid $secondary-color
+      &:last-child
+        border: none
   &-link
     font-size: 16px
     padding-bottom: 3px  
-   
     &:hover
       color: $main-color
       border-bottom: 2px solid $main-color    
@@ -44,5 +44,57 @@
     padding: 12px 15px 10px
     font-size: 14px
     font-weight: 600
+
+    /*Медиа запросы*/
+@media (max-width: 992px)
+  .navbar
+    background: #ffffff
+    &__menu
+      flex-basis: 0
+    &__logo
+      margin-right: 20px
+    &__links
+      & li
+        padding: 0 5px 0 10px
+    &-phone
+      display: flex
+      align-items: center
+      &__link 
+        font-size: 14px
+    &-button
+      margin-left: 5px
+      font-size: 11px
+@media (max-width: 768px)
+  .navbar
+    &__menu
+      &-active
+        display: block
+        span
+
+    &__links
+      display: none
+      &-active
+        display: block
+        position: absolute  
+        top: 25%
+        left: 11%
+        width: 100%
+        li
+          border: none
+          padding: 12px
+    &-phone
+      &__icon
+        display: none
+@media (max-width: 575px)
+  .navbar
+    &-phone
+      &__link
+        display: none
+    &__links
+      &-active
+        left: 0
+        li
+          text-align: center
+
 
 
