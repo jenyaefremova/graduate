@@ -11,38 +11,38 @@
 
 <body>
   <header>
-    <section class="section navbar">
+    <section class="navbar">
       <div class="container">
-        <h1 class="visually-hidden">Меню компании</h1>
-        <div class="navbar-block">
+        <h2 class="visually-hidden">Меню компании</h1>
+          <div class="navbar-block">
 
-          <div class="navbar__menu">
-            <div class="navbar__logo">
-              <a href="#"><img src="img/navbar/logo.png" alt="логотип компании"></a>
+            <div class="navbar__menu">
+              <div class="navbar__logo">
+                <a href="#"><img src="img/navbar/logo.png" alt="логотип компании"></a>
+              </div>
+              <!-- /.navbar__logo -->
+              <ul class="navbar__links" id="menu-active">
+                <li><a href="#" class="navbar-link">Услуги</a></li>
+                <li><a href="#" class="navbar-link">Цены</a></li>
+                <li><a href="#" class="navbar-link">Отзывы</a></li>
+                <li><a href="#" class="navbar-link">Новости</a></li>
+                <li><a href="#" class="navbar-link">Контакты</a></li>
+
+              </ul>
+              <!-- /.navbar__links -->
+              <a href="#" class="navbar__menu-active" id="button-active"><span>&#9776;</span></a>
             </div>
-            <!-- /.navbar__logo -->
-            <ul class="navbar__links" id="menu-active">
-              <li><a href="#" class="navbar-link">Услуги</a></li>
-              <li><a href="#" class="navbar-link">Цены</a></li>
-              <li><a href="#" class="navbar-link">Отзывы</a></li>
-              <li><a href="#" class="navbar-link">Новости</a></li>
-              <li><a href="#" class="navbar-link">Контакты</a></li>
 
-            </ul>
-            <!-- /.navbar__links -->
-            <a href="#" class="navbar__menu-active" id="button-active"><span>&#9776;</span></a>
-          </div>
-
-          <div class="navbar__contacts">
-            <div class="navbar-phone">
-              <img src="img/navbar/phone-receiver.png" alt="телефон" class="navbar-phone__icon">
-              <a href="tel:+78633422221" class="navbar-phone__link">+7 (863) <b>342-22-21</b></a>
+            <div class="navbar__contacts">
+              <div class="navbar-phone">
+                <img src="img/navbar/phone-receiver.png" alt="телефон" class="navbar-phone__icon">
+                <a href="tel:+78633422221" class="navbar-phone__link">+7 (863) <b>342-22-21</b></a>
+              </div>
+              <button class="button navbar-button">Заказать звонок</button>
             </div>
-            <button class="button navbar-button">Заказать звонок</button>
-          </div>
 
-        </div>
-        <!-- /.navbar-block -->
+          </div>
+          <!-- /.navbar-block -->
       </div>
       <!-- /.container -->
     </section>
@@ -52,10 +52,71 @@
   </header>
 
   <main>
-
+    <section class="hero">
+      <div class="container">
+        <h1 class=" hero__title">Наша бригада по монтированию отопления и сантехники</h1>
+        <!-- /.h1 hero__title -->
+        <h2 class="hero__subtitle">вызов по Москве и Московской области</h2>
+        <!-- /.hero_subtitle -->
+        <span class="hero__description">Наша бригада из 20 человек сделает всё быстро и недорого в самые кратчайшие
+          сроки. Всё что Вам нужно это оставить заявку либо позвонить самому на указанный номер. Всего
+          хорошего.</span>
+        <!-- /.hero__description -->
+        <button class="button hero__button">Подробнее</button> <!-- /.button hero__button -->
+        <div class="slider-buttons">
+          <div class="slider-button"></div>
+          <div class="slider-button"></div>
+          <div class="slider-button"></div>
+          <div class="slider-button"></div>
+        </div>
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.hero -->
+    <section class="section services">
+      <div class="container">
+        <h2 class="services__title section__title">Услуги</h2>
+        <div class="services-block">
+          <div class="service-card">
+            <div class="service-card__image">
+              <img src="img/services/battary.jpg" alt="монтаж">
+            </div>
+            <div class="service-card__description">
+              <p class="service-card__text">Монтаж систем отопления</p>
+              <button class="button service-card__button">Узнать цену</button>
+            </div>
+          </div>
+          <!-- /.service-card -->
+          <div class="service-card">
+            <div class="service-card__image">
+              <img src="img/services/key.jpg" alt="Услуга">
+            </div>
+            <div class="service-card__description">
+              <p class="service-card__text">Здесь будет короткое описание о данной услуге</p>
+              <button class="button service-card__button">Узнать цену</button>
+            </div>
+          </div>
+          <!-- /.service-card -->
+          <div class="service-card">
+            <div class="service-card__image">
+              <img src="img/services/services.jpg" alt="монтаж">
+            </div>
+            <div class="service-card__description">
+              <p class="service-card__text">Монтаж канализационного оборудования</p>
+              <button class="button service-card__button">Узнать цену</button>
+            </div>
+          </div>
+          <!-- /.service-card -->
+        </div>
+        <!-- /.services-block -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section services -->
   </main>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/main.js"></script>
+
 
 </body>
 

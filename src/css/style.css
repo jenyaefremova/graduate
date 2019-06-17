@@ -387,6 +387,10 @@ a {
 .button {
   border: none;
   outline: 0;
+  padding: 12px 38px;
+  background-color: #ffc800;
+  text-transform: uppercase;
+  font-size: 18px;
 }
 
 .button:hover {
@@ -396,6 +400,20 @@ a {
 
 .visually-hidden {
   display: none;
+}
+
+.section {
+  padding: 0 0 117px;
+  margin-top: 133px;
+}
+
+.section__title {
+  display: inline-block;
+  font-size: 28px;
+  background-color: #ffc800;
+  padding: 17px 68px 17px 69px;
+  text-transform: uppercase;
+  margin: -34px 0 75px -34px;
 }
 
 @media (max-width: 1200px) {
@@ -427,8 +445,8 @@ a {
 
 /*Подключение стилей секции навигационного меню*/
 .navbar {
-  padding-top: 5px;
-  padding-bottom: 8px;
+  padding-top: 4px;
+  padding-bottom: 6px;
   background: -webkit-gradient(linear, left top, right top, color-stop(60%, #ffffff), color-stop(40%, #f1f1f1));
   background: linear-gradient(to right, #ffffff 60%, #f1f1f1 40%);
 }
@@ -469,6 +487,9 @@ a {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .navbar__links-active {
@@ -476,7 +497,7 @@ a {
 }
 
 .navbar__links li {
-  padding: 0 25px 0 30px;
+  padding: 0 27px;
   border-right: 1px solid #f1f1f1;
 }
 
@@ -503,9 +524,17 @@ a {
           align-items: center;
 }
 
+.navbar-phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .navbar-phone__link {
-  margin-left: 6px;
-  font-size: 18px;
+  font-size: 19px;
 }
 
 .navbar-button {
@@ -515,7 +544,14 @@ a {
   padding: 12px 15px 10px;
   font-size: 14px;
   font-weight: 600;
+  text-transform: none;
   /*Медиа запросы*/
+}
+
+@media (max-width: 1200px) {
+  .navbar-phone__link {
+    font-size: 17px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -544,7 +580,7 @@ a {
     font-size: 14px;
   }
   .navbar-button {
-    margin-left: 5px;
+    margin-left: 10px;
     font-size: 11px;
   }
 }
@@ -582,5 +618,138 @@ a {
   .navbar__links-active li {
     text-align: center;
   }
+}
+
+/*Подключение стилей секции главного экрана*/
+.hero {
+  padding: 180px 0 45px;
+  background: url("../img/hero/hero-bg.jpg") no-repeat top;
+}
+
+.hero__title {
+  font-size: 35px;
+  font-weight: 600;
+  color: #ffc800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 10px;
+}
+
+.hero__subtitle {
+  color: #fffffe;
+  font-size: 35px;
+  margin-top: 0;
+}
+
+.hero__description {
+  display: block;
+  opacity: 0.42;
+  color: #fffffe;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 47px;
+}
+
+.hero__button {
+  margin-bottom: 207px;
+}
+
+.slider-button {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.slider-button:hover {
+  background-color: #ffc800;
+  cursor: pointer;
+}
+
+.slider-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 30px 0 50px;
+  }
+  .hero__title {
+    font-size: 30px;
+  }
+  .hero__subtitle {
+    font-size: 30px;
+  }
+  .hero__description {
+    font-size: 16px;
+  }
+  .hero__button {
+    margin-bottom: 40px;
+  }
+  .slider-button {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero {
+    padding: 30px 0 50px;
+    text-align: center;
+  }
+  .hero__title {
+    font-size: 25px;
+  }
+  .hero__subtitle {
+    font-size: 25px;
+  }
+  .hero__description {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+  }
+}
+
+.services {
+  background-color: #f1f1f1;
+}
+
+.services-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.service-card {
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  text-align: center;
+  position: relative;
+}
+
+.service-card__description {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+.service-card__text {
+  max-width: 294px;
+  margin: auto;
+  line-height: 26px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.service-card__button {
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 11px 19px;
 }
 /*# sourceMappingURL=style.css.map */
