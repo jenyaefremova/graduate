@@ -2,25 +2,64 @@
   background-color: $secondary-color
   &-block
     display: flex
+    justify-content: space-between
+    flex-wrap: wrap
 .service-card
-  flex-basis: 33%
-  text-align: center
-  position: relative
-  &__image
-    
-  &__description
-    position: absolute
-    top: 30%
-    left: 10%
+  flex-basis: 32%
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  width: 377px
+  height: 236px
+  margin-bottom: 20px
+  &-1
+    background: url('../img/services/battary.jpg') no-repeat center
+  &-2
+    background: url('../img/services/services.jpg') no-repeat center
+  &-3
+    background: url('../img/services/key.jpg') no-repeat center     
+  &:hover    
+    .service-card      
+      &__text
+        display: none
+        &-new
+          display: block        
+      &__button
+        display: none
+        &-new
+          display: block           
   &__text
     max-width: 294px
-    margin: auto
     line-height: 26px
-    margin-bottom: 30px
     color: #ffffff 
+    text-align: center
+    &-new
+      max-width: 294px
+      text-align: center
+      color: #000000
+      display: none
   &__button
     font-size: 15px
     text-transform: uppercase
     padding: 11px 19px
-    
+    &-new
+      display: none
+      background-color: #000000
+      color: #ffffff 
 
+@media (max-width: 1200px)
+  .service
+    &-card
+      flex-basis: 48%
+    &s
+      &-block
+        justify-content: space-around
+@media (max-width: 768px)
+  .service
+    &-card
+      flex-basis: 100%
+@media (max-width: 320px)
+  .service
+    &-card
+      height: 190px

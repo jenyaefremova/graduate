@@ -10,6 +10,8 @@ a
   text-decoration: none
   color: $text-color
   outline: 0
+img
+  width: 100%
 .container
   width: 1170px
   margin: auto
@@ -32,22 +34,36 @@ a
     display: inline-block
     font-size: 28px
     background-color: $main-color
-    padding: 17px 68px 17px 69px
+    padding: 14px 20px 
+    min-width: 244px
+    text-align: center
     text-transform: uppercase
     margin: -34px 0 75px -34px
 
 @media (max-width: 1200px)
   .container
     width: 970px
+  .section
+    margin-top: 100px
 @media (max-width: 992px)
   .container
     max-width: 750px
     width: 90%
+  .section
+    margin-top: 60px
 @media (max-width: 768px)
   .container
     max-width: 580px
     width: 90%
+  .section
+    &__title
+      margin: -34px 0 30px 20px
+      font-size: 20px
 @media (max-width: 575px)
   .container
     max-width: 550px
     width: 90%
+  .section
+    &__title
+      margin-left: 0
+      font-size: 16px

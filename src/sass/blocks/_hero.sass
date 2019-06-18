@@ -12,13 +12,14 @@
     color: #fffffe
     font-size: 35px    
     margin-top: 0
+    margin-bottom: 25px
   &__description
     display: block
     opacity: 0.42
     color: #fffffe
     font-size: 20px
     line-height: 28px
-    margin-bottom: 47px
+    margin-bottom: 49px
   &__button
     margin-bottom: 207px
 .slider-button
@@ -34,6 +35,14 @@
     display: flex
     justify-content: center
 
+@media (max-width: 1200px)
+  .hero
+    &__button
+      margin-bottom: 180px
+@media (max-width: 992px)
+  .hero
+    &__button
+      margin-bottom: 70px
 @media (max-width: 768px)
   .hero
     padding: 30px 0 50px

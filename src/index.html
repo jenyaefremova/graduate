@@ -22,11 +22,11 @@
               </div>
               <!-- /.navbar__logo -->
               <ul class="navbar__links" id="menu-active">
-                <li><a href="#" class="navbar-link">Услуги</a></li>
-                <li><a href="#" class="navbar-link">Цены</a></li>
-                <li><a href="#" class="navbar-link">Отзывы</a></li>
-                <li><a href="#" class="navbar-link">Новости</a></li>
-                <li><a href="#" class="navbar-link">Контакты</a></li>
+                <li><a href="#services" class="navbar-link">Услуги</a></li>
+                <li><a href="#prices" class="navbar-link">Цены</a></li>
+                <li><a href="#feedback" class="navbar-link">Отзывы</a></li>
+                <li><a href="#news" class="navbar-link">Новости</a></li>
+                <li><a href="#contacts" class="navbar-link">Контакты</a></li>
 
               </ul>
               <!-- /.navbar__links -->
@@ -73,38 +73,50 @@
       <!-- /.container -->
     </section>
     <!-- /.hero -->
-    <section class="section services">
+    <section class="section services" id="services">
       <div class="container">
         <h2 class="services__title section__title">Услуги</h2>
         <div class="services-block">
-          <div class="service-card">
-            <div class="service-card__image">
-              <img src="img/services/battary.jpg" alt="монтаж">
-            </div>
-            <div class="service-card__description">
-              <p class="service-card__text">Монтаж систем отопления</p>
-              <button class="button service-card__button">Узнать цену</button>
-            </div>
+          <div class="service-card service-card-1 wow fadeInUp">            
+              <p class="service-card__text">Монтаж систем <br> отопления</p>
+              <p class="service-card__text-new">Здесь будет короткое описание о данной услуге</p>              
+              <button class="button service-card__button">Узнать цену</button>            
+              <button class="button service-card__button-new">500 руб.</button>            
           </div>
           <!-- /.service-card -->
-          <div class="service-card">
-            <div class="service-card__image">
-              <img src="img/services/key.jpg" alt="Услуга">
-            </div>
-            <div class="service-card__description">
-              <p class="service-card__text">Здесь будет короткое описание о данной услуге</p>
+          <div class="service-card service-card-2 wow fadeInUp" data-wow-delay="0.1s">          
+              <p class="service-card__text">Монтаж сантехнического оборудования</p>
+              <p class="service-card__text-new">Здесь будет короткое описание о данной услуге</p> 
               <button class="button service-card__button">Узнать цену</button>
-            </div>
+              <button class="button service-card__button-new">500 руб.</button> 
           </div>
           <!-- /.service-card -->
-          <div class="service-card">
-            <div class="service-card__image">
-              <img src="img/services/services.jpg" alt="монтаж">
-            </div>
-            <div class="service-card__description">
+          <div class="service-card service-card-3 wow fadeInUp" data-wow-delay="0.2s">            
               <p class="service-card__text">Монтаж канализационного оборудования</p>
+              <p class="service-card__text-new">Здесь будет короткое описание о данной услуге</p> 
+              <button class="button service-card__button">Узнать цену</button>   
+              <button class="button service-card__button-new">500 руб.</button>          
+          </div>
+          <!-- /.service-card -->
+          <div class="service-card service-card-1 wow fadeInUp" data-wow-delay="0.3s">            
+              <p class="service-card__text">Монтаж систем <br> отопления</p>
+              <p class="service-card__text-new">Здесь будет короткое описание о данной услуге</p> 
+              <button class="button service-card__button">Узнать цену</button>   
+              <button class="button service-card__button-new">500 руб.</button>          
+          </div>
+          <!-- /.service-card -->
+          <div class="service-card service-card-2 wow fadeInUp" data-wow-delay="0.4s">          
+              <p class="service-card__text">Монтаж сантехнического оборудования</p>
+              <p class="service-card__text-new">Здесь будет короткое описание о данной услуге</p> 
               <button class="button service-card__button">Узнать цену</button>
-            </div>
+              <button class="button service-card__button-new">500 руб.</button> 
+          </div>
+          <!-- /.service-card -->
+          <div class="service-card service-card-3 wow fadeInUp" data-wow-delay="0.5s">            
+              <p class="service-card__text">Монтаж канализационного оборудования</p>
+              <p class="service-card__text-new">Здесь будет короткое описание о данной услуге</p> 
+              <button class="button service-card__button">Узнать цену</button>  
+              <button class="button service-card__button-new">500 руб.</button>           
           </div>
           <!-- /.service-card -->
         </div>
@@ -116,6 +128,10 @@
   </main>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 
 
 </body>

@@ -1,7 +1,7 @@
 .navbar
   padding-top: 4px
   padding-bottom: 6px  
-  background: linear-gradient(to right, #ffffff 60%, #f1f1f1 40%)  
+  background: linear-gradient(to right, #ffffff 62%, #f1f1f1 37%)  
   &-block
     display: flex
     justify-content: space-between
@@ -38,15 +38,21 @@
     display: flex
     align-items: center
     &__link  
-      font-size: 19px      
+      font-size: 19px  
+    &__icon
+      width: 18px
+      height: 18px    
   &-button
     margin-left: 44px
     margin-top: 2px
     background-color: $main-color
-    padding: 12px 15px 10px
+    padding: 7px 15px 
     font-size: 14px
     font-weight: 600
     text-transform: none
+  &__logo
+    max-width: 50px
+    min-width: 35px
 
     /*Медиа запросы*/
 @media (max-width: 1200px)
