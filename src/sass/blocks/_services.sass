@@ -13,13 +13,16 @@
   width: 377px
   height: 236px
   margin-bottom: 20px
+  filter: grayscale(100%)   
+  background-size: contain 
   &-1
     background: url('../img/services/battary.jpg') no-repeat center
   &-2
     background: url('../img/services/services.jpg') no-repeat center
   &-3
-    background: url('../img/services/key.jpg') no-repeat center     
+    background: url('../img/services/key.jpg') no-repeat center   
   &:hover    
+    filter: none
     .service-card      
       &__text
         display: none
@@ -37,6 +40,7 @@
     &-new
       max-width: 294px
       text-align: center
+      line-height: 26px
       color: #000000
       display: none
   &__button
