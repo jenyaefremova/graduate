@@ -61,9 +61,11 @@
         justify-content: space-around
 @media (max-width: 768px)
   .service
-    &-card
-      flex-basis: 100%
-@media (max-width: 320px)
+    &-cards-block
+      justify-content: space-between
+      
+@media (max-width: 575px)
   .service
     &-card
       height: 190px
+      flex-basis: 100%
