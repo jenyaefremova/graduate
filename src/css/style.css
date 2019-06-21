@@ -358,6 +358,14 @@ template {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Proxima Nova Black';
+  src: url("../fonts/ProximaNova-Black.eot");
+  src: local("Proxima Nova Black"), local("ProximaNova-Black"), url("../fonts/ProximaNova-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Black.woff2") format("woff2"), url("../fonts/ProximaNova-BlackRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -877,12 +885,8 @@ img {
 /*Подключение стилей секции главного экрана*/
 .hero {
   background-color: gray;
-}
-
-.hero__container {
-  position: absolute;
-  top: 30%;
-  left: 15%;
+  background: url("../img/hero/hero-bg.jpg") no-repeat top;
+  background-size: cover;
 }
 
 .hero__title {
@@ -907,7 +911,7 @@ img {
   color: #fffffe;
   font-size: 20px;
   line-height: 28px;
-  margin-bottom: 49px;
+  margin-bottom: 28px;
 }
 
 .hero__button {
@@ -915,7 +919,8 @@ img {
 }
 
 .slider {
-  position: relative;
+  padding-top: 157px;
+  margin-bottom: 40px;
 }
 
 .slider-button {
@@ -938,6 +943,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 40px;
 }
 
 @media (max-width: 1200px) {
@@ -947,12 +953,18 @@ img {
 }
 
 @media (max-width: 992px) {
+  .hero {
+    background-position: left;
+  }
   .hero__button {
     margin-bottom: 70px;
   }
 }
 
 @media (max-width: 768px) {
+  .slider {
+    padding-top: 40px;
+  }
   .hero {
     padding: 30px 0 50px;
   }
@@ -978,12 +990,13 @@ img {
   .hero {
     padding: 30px 0 50px;
     text-align: center;
+    background-position: left;
   }
   .hero__title {
-    font-size: 25px;
+    font-size: 18px;
   }
   .hero__subtitle {
-    font-size: 25px;
+    font-size: 18px;
   }
   .hero__description {
     font-size: 14px;
@@ -1121,6 +1134,7 @@ img {
 .about {
   background: -webkit-gradient(linear, left top, right top, color-stop(58%, #f1f1f1), color-stop(42%, #ffffff));
   background: linear-gradient(to right, #f1f1f1 58%, #ffffff 42%);
+  margin-top: 122px;
 }
 
 .about-block {
@@ -1149,6 +1163,7 @@ img {
 }
 
 .about-list__number {
+  font-family: 'Proxima Nova Black';
   font-size: 35px;
   font-weight: 700;
   line-height: 25px;
@@ -1271,10 +1286,12 @@ img {
 
 .new__image {
   max-width: 377px;
+  margin-bottom: 6px;
 }
 
 .news {
   background-color: #f1f1f1;
+  padding-bottom: 80px;
 }
 
 .news-block {
@@ -1284,25 +1301,32 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 70px;
+  margin-bottom: 55px;
 }
 
 .news__button {
   font-size: 20px;
   margin: auto;
   display: block;
+  padding: 15px 40px;
+}
+
+.news__title {
+  margin-bottom: 55px;
 }
 
 .text__heading {
   display: inline-block;
   text-transform: uppercase;
   margin-right: 57px;
+  font-size: 20px;
 }
 
 .text__description {
   max-width: 325px;
   line-height: 28px;
   font-size: 18px;
+  margin-top: -5px;
 }
 
 .important {
@@ -1333,6 +1357,12 @@ img {
 @media (max-width: 320px) {
   .text__heading {
     display: block;
+  }
+  .text__description {
+    margin-top: 7px;
+  }
+  .news__button {
+    padding: 15px 30px;
   }
 }
 
