@@ -37,7 +37,7 @@
               <img src="img/navbar/phone-receiver.png" alt="телефон" class="navbar-phone__icon">
               <a href="tel:+78633422221" class="navbar-phone__link">+7 (863) <b>342-22-21</b></a>
             </div>
-            <button class="button navbar-button">Заказать звонок</button>
+            <button class="button navbar-button modal-button">Заказать звонок</button>
           </div>
 
         </div>
@@ -440,8 +440,22 @@
     <!-- /.container -->
   </footer>
 
+  <div class="modal" id="modal">
+      <div class="modal-dialog">
+        <h4 class="modal-dialog__heading">Перезвоните мне</h4>
+        <form action="#" class="form modal__form" id="modal-form">
+          <input type="tel" class="input modal__input phone" placeholder="+7 XXX XXX XX XX" autofocus>
+        </form>
+        <!-- /.form form__modal -->
+        <button class="modal-dialog__button" id="close">&#10007;</button>
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/modal.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
