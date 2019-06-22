@@ -412,10 +412,8 @@
     <!-- /.section news -->
 
     <section class="contacts" id="contacts">
-      <div class="map">
-        <script type="text/javascript" charset="utf-8" async
-          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab378c05eeb40e09fe104915076d2a942851535fe70c5d5f42f267b46eaf88826&amp;width=100%25&amp;height=666&amp;lang=ru_RU&amp;scroll=false">
-        </script>
+      <div class="map" id="map">
+        
       </div>
 
       <div class="container">
@@ -502,6 +500,27 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
+  <script>
+      var mapShow = 1500; // В каком положении полосы прокрутки начинать показ карты
+      var map = $('#map');
+      var mapAdd = false;
+  
+      $(document).ready(function () {
+        $(window).scroll(function () { // При прокрутке попадаем в эту функцию
+        
+          /* В зависимости от положения полосы прокрукти и значения top_show, начинаем загрузку карты */
+          if ($(this).scrollTop() > mapShow) {
+            if (mapAdd) return;
+            mapAdd = true;
+            var script = document.createElement('script');
+            script.src =
+              "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab378c05eeb40e09fe104915076d2a942851535fe70c5d5f42f267b46eaf88826&amp;width=100%25&amp;height=666&amp;lang=ru_RU&amp;scroll=false";
+            map.append(script);
+          };
+  
+        });
+      });
+    </script>
   <script>
     new WOW().init();
     $(document).ready(function () {
