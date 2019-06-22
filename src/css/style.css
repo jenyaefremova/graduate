@@ -916,7 +916,7 @@ img {
   color: #fffffe;
   font-size: 20px;
   line-height: 28px;
-  margin-bottom: 28px;
+  margin-bottom: 53px;
 }
 
 .hero__button {
@@ -924,8 +924,7 @@ img {
 }
 
 .slider {
-  padding-top: 157px;
-  margin-bottom: 40px;
+  padding-top: 180px;
 }
 
 .slider-button {
@@ -1051,69 +1050,60 @@ img {
   width: 377px;
   height: 236px;
   margin-bottom: 20px;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-  background-size: contain;
 }
 
-.service-card-1 {
-  background: url("../img/services/battary.jpg") no-repeat center;
-}
-
-.service-card-2 {
-  background: url("../img/services/services.jpg") no-repeat center;
-}
-
-.service-card-3 {
-  background: url("../img/services/key.jpg") no-repeat center;
-}
-
-.service-card:hover {
+.service-card:hover .service-card__image {
   -webkit-filter: none;
           filter: none;
 }
 
-.service-card:hover .service-card__text {
+.service-card:hover .service-card__description {
   display: none;
 }
 
-.service-card:hover .service-card__text-new {
+.service-card:hover .service-card__description-new {
   display: block;
+  position: absolute;
+  text-align: center;
 }
 
-.service-card:hover .service-card__button {
+.service-card:hover .service-card__description-new p {
+  color: #000000;
+}
+
+.service-card:hover .service-card__description-new button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 11px 35px;
+}
+
+.service-card__image {
+  position: relative;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.service-card__description {
+  position: absolute;
+  text-align: center;
+}
+
+.service-card__description-new {
   display: none;
-}
-
-.service-card:hover .service-card__button-new {
-  display: block;
 }
 
 .service-card__text {
-  max-width: 294px;
+  text-align: center;
+  font-size: 20px;
   line-height: 26px;
+  max-width: 295px;
   color: #ffffff;
-  text-align: center;
-}
-
-.service-card__text-new {
-  max-width: 294px;
-  text-align: center;
-  line-height: 26px;
-  color: #000000;
-  display: none;
 }
 
 .service-card__button {
   font-size: 15px;
   text-transform: uppercase;
   padding: 11px 19px;
-}
-
-.service-card__button-new {
-  display: none;
-  background-color: #000000;
-  color: #ffffff;
 }
 
 @media (max-width: 1200px) {
