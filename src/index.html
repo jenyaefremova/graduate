@@ -369,26 +369,26 @@
     </section>
     <!-- /.section news -->
 
-    <section class="contacts" id="contacts">
+   <section class="contacts" id="contacts">
       <div class="map">
         <script type="text/javascript" charset="utf-8" async
           src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab378c05eeb40e09fe104915076d2a942851535fe70c5d5f42f267b46eaf88826&amp;width=100%25&amp;height=666&amp;lang=ru_RU&amp;scroll=false">
         </script>
       </div>
-      <!-- /.map -->
+      
       <div class="container">
         <div class="contacts-block">
           <h3 class="contacts__heading">оставьте <span>заявку</span></h3>
-          <form action="" class="form contacts__form">
-            <input type="text" class="input" placeholder="Введите Ваше имя">
-            <input type="tel" class="input" placeholder="Введите Ваш номер телефона">
+          <form action="" class="form contacts__form" id="contacts-form">
+            <input type="text" name="name" class="input" placeholder="Введите Ваше имя">
+            <input type="tel" name="phone" class="input phone" placeholder="Введите Ваш номер телефона">
             <button class="button form__button">заказать звонок</button>
 
           </form>
         </div>
       </div>
-      <!-- /.container -->
-    </section>
+     
+    </section> 
     <!-- /.section contacts -->
   </main>
 
@@ -405,7 +405,7 @@
         <ul class="footer__social">
           <li class="social-item">
             <a href="" class="social-link">
-              <img src="img/footer/vk.png" alt="">
+              <img src="img/footer/instagram.png" alt="">
             </a>
           </li>
           <li class="social-item">
@@ -444,9 +444,30 @@
   <script src="js/main.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/wow.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
   <script>
     new WOW().init();
     $(document).ready(function () {
+      $("#contacts-form").validate({
+        rules: {
+          name: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+          },
+          phone: {
+            required: true
+          }
+        },
+        messages: {
+          name: "Заполните поле",
+          phone: "Заполните поле"
+        }
+      });
+
+      $(".phone").mask("+7 (999) 999-99-99");
+
       $('.slider').slick({
         adaptiveHeight: true,
         autoplay: true,
