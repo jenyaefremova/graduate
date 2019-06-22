@@ -1,11 +1,8 @@
 .feedback
   background-color: #010101
-  
-  &-block
-    display: flex
-    justify-content: space-around
-    align-items: center
-    color: #ffffff
+  padding-bottom: 0
+  &__slider
+    margin-bottom: 100px    
   &-card
     display: flex
     flex-direction: column
@@ -24,10 +21,24 @@
     max-width: 466px
     margin-bottom: 28px
     line-height: 28px
+    color: #ffffff
   &-likes
     display: flex
     align-items: center
     justify-content: space-around
+    color: #ffffff
+    &__icon
+      margin-right: 7px
+    &__count
+      margin-right: 30px
+.slick-dots
+  display: none
+@media (max-width: 575px)
+  .card
+    &-text
+      font-size: 14px
+  .feedback__slider
+    margin-bottom: 40px
 
 
  

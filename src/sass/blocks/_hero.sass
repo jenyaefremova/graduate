@@ -32,13 +32,16 @@
     background-color: #ffffff
     margin-right: 5px
     margin-left: 5px
-    &:hover
+    &:first-child
       background-color: $main-color
+    &:hover
       cursor: pointer
     &s
       display: flex
       justify-content: center
       padding-bottom: 40px
+.slick-arrow
+  display: none !important
 
 @media (max-width: 1200px)
   .hero
