@@ -10,11 +10,12 @@
 </head>
 
 <body>
+  <!-- Yandex.Metrika counter --> <script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(54173989, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54173989" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
   <header>
     <section class="navbar">
       <div class="container">
         <div class="navbar-block">
-
+          <h2 class="visually-hidden">Услуги и цены компании по ремонту</h2>
           <div class="navbar__menu">
             <div class="navbar__logo">
               <a href="#"><img src="img/navbar/logo.png" alt="логотип компании"></a>
@@ -249,8 +250,6 @@
         <h2 class="section__title feedback__title">отзывы</h2>
         <div class="feedback__slider">
           <div class="feedback__slide">
-
-
             <div class="feedback-card">
               <div class="card-image">
                 <img src="img/feedback/photo-1.png" alt="photo">
@@ -270,11 +269,8 @@
               </div>
 
             </div>
-
           </div>
           <div class="feedback__slide">
-
-
             <div class="feedback-card">
               <div class="card-image">
                 <img src="img/feedback/photo-2.png" alt="photo">
@@ -293,50 +289,24 @@
                 <span class="card-likes__count">2</span>
               </div>
             </div>
-
           </div>
           <div class="feedback__slide">
-            <div class="feedback-card">
-              <div class="card-image">
-                <img src="img/feedback/photo-1.png" alt="photo">
-              </div>
-              <span class="card-name">Петр Марченко</span>
-              <p class="card-text">Authoritatively incubate multidisciplinary partnerships and user friendly
-                e-markets. Interactively whiteboard client-based leadership skills</p>
-              <div class="card-likes">
-                <div class="card-likes__icon">
-                  <img src="img/feedback/like.png" alt="like">
-                </div>
-                <span class="card-likes__count">1</span>
-                <div class="card-likes__icon">
-                  <img src="img/feedback/dislike.png" alt="disike">
-                </div>
-                <span class="card-likes__count">1</span>
-              </div>
-            </div>
-
-
-
-          </div>
-          <div class="feedback__slide">
-
-
             <div class="feedback-card">
               <div class="card-image">
                 <img src="img/feedback/photo-2.png" alt="photo">
               </div>
-              <span class="card-name">Женщина кошка</span>
+              <span class="card-name">Виктор Шукшин</span>
               <p class="card-text"> Synergistically mesh magnetic leadership rather than cooperative best practices.
                 Authoritatively initiate.Monotonectally actualize 24/7 metrics</p>
               <div class="card-likes">
                 <div class="card-likes__icon">
                   <img src="img/feedback/like.png" alt="like">
                 </div>
-                <span class="card-likes__count">173</span>
+                <span class="card-likes__count">143</span>
                 <div class="card-likes__icon">
                   <img src="img/feedback/dislike.png" alt="disike">
                 </div>
-                <span class="card-likes__count">58</span>
+                <span class="card-likes__count">2</span>
               </div>
             </div>
           </div>
@@ -346,8 +316,7 @@
           <div class="slider-button"></div>
           <div class="slider-button"></div>
         </div>
-      </div>
-      <!-- /.conainer -->
+        <!-- /.conainer -->
     </section>
     <!-- /.section feedback -->
 
@@ -413,13 +382,13 @@
 
     <section class="contacts" id="contacts">
       <div class="map" id="map">
-        
+
       </div>
 
       <div class="container">
         <div class="contacts-block">
           <h3 class="contacts__heading">оставьте <span>заявку</span></h3>
-          <form action="" class="form contacts__form" id="contacts-form">
+          <form action="POST" class="form contacts__form" id="contacts-form">
             <input type="text" name="name" class="input" placeholder="Введите Ваше имя">
             <input type="tel" name="phone" class="input phone" placeholder="Введите Ваш номер телефона">
             <button class="button form__button">заказать звонок</button>
@@ -483,7 +452,7 @@
   <div class="modal" id="modal">
     <div class="modal-dialog">
       <h4 class="modal-dialog__heading">Перезвоните мне</h4>
-      <form action="#" class="form modal__form" id="modal-form">
+      <form action="POST" class="form modal__form" id="modal-form">
         <input type="tel" class="input modal__input phone" placeholder="+7 XXX XXX XX XX" autofocus>
       </form>
       <!-- /.form form__modal -->
@@ -501,26 +470,26 @@
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
   <script>
-      var mapShow = 1500; // В каком положении полосы прокрутки начинать показ карты
-      var map = $('#map');
-      var mapAdd = false;
-  
-      $(document).ready(function () {
-        $(window).scroll(function () { // При прокрутке попадаем в эту функцию
-        
-          /* В зависимости от положения полосы прокрукти и значения top_show, начинаем загрузку карты */
-          if ($(this).scrollTop() > mapShow) {
-            if (mapAdd) return;
-            mapAdd = true;
-            var script = document.createElement('script');
-            script.src =
-              "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab378c05eeb40e09fe104915076d2a942851535fe70c5d5f42f267b46eaf88826&amp;width=100%25&amp;height=666&amp;lang=ru_RU&amp;scroll=false";
-            map.append(script);
-          };
-  
-        });
+    var mapShow = 1500; // В каком положении полосы прокрутки начинать показ карты
+    var map = $('#map');
+    var mapAdd = false;
+
+    $(document).ready(function () {
+      $(window).scroll(function () { // При прокрутке попадаем в эту функцию
+
+        /* В зависимости от положения полосы прокрукти и значения top_show, начинаем загрузку карты */
+        if ($(this).scrollTop() > mapShow) {
+          if (mapAdd) return;
+          mapAdd = true;
+          var script = document.createElement('script');
+          script.src =
+            "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab378c05eeb40e09fe104915076d2a942851535fe70c5d5f42f267b46eaf88826&amp;width=100%25&amp;height=666&amp;lang=ru_RU&amp;scroll=false";
+          map.append(script);
+        };
+
       });
-    </script>
+    });
+  </script>
   <script>
     new WOW().init();
     $(document).ready(function () {

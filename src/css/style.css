@@ -1130,6 +1130,13 @@ img {
     height: 190px;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 320px) {
+  .service-card {
+    margin-bottom: 20px;
   }
 }
 
@@ -1316,6 +1323,18 @@ img {
           align-items: center;
 }
 
+.flexible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .card-image {
   width: 116px;
   height: 116px;
@@ -1362,6 +1381,7 @@ img {
 @media (max-width: 575px) {
   .card-text {
     font-size: 14px;
+    width: 240px;
   }
   .feedback__slider {
     margin-bottom: 40px;
@@ -1502,6 +1522,10 @@ img {
   .contacts-block {
     left: 5%;
     padding: 20px;
+    width: 280px;
+  }
+  .form__button {
+    font-size: 18px;
   }
 }
 
