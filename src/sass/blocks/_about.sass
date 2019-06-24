@@ -9,21 +9,26 @@
   &-description
     padding-left: 90px
     margin-top: -17px
-  &-list    
+  &-list   
+    margin-top: 20px
     &__item
       margin-bottom: 65px
       display: flex
-      align-items: center
+      align-items: center    
     &__number
       font-family: 'Proxima Nova Black'
       font-size: 35px
-      font-weight: 700
-      line-height: 25px
       color: $main-color
-      text-align: center
+      vertical-align: top
+      display: block
       position: relative
       margin-right: 67px
-      width: 10px
+      width: 20px
+      &:nth-child(1)
+        align-self: end
+      &:nth-child(2)
+        align-self: end
+
       &:after
         content: ''
         position: absolute
@@ -33,7 +38,6 @@
         height: 2px
         background-color: #000000
     &__text
-      margin-top: 5px
       font-size: 20px
       line-height: 25px
       color: #020202

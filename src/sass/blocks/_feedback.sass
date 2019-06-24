@@ -1,13 +1,20 @@
 .feedback
   background-color: #010101
   padding-bottom: 0
+  margin-top: 115px
   &__slider
     margin-bottom: 100px  
+  &__slide
+    outline: 0
   &-card
     display: flex
     flex-direction: column
     text-align: center
-    align-items: center   
+    align-items: center  
+    outline: 0 
+  &__container
+    width: 1350px
+    margin: auto
 .card
   &-image
     width: 116px
@@ -40,6 +47,21 @@
       width: 240px
   .feedback__slider
     margin-bottom: 40px
+  .feedback__container
+    max-width: 550px
+    width: 90%
+@media (max-width: 1200px)
+  .feedback__container
+    width: 970px
+@media (max-width: 992px)
+  .feedback__container
+    max-width: 750px
+    width: 90%
+@media (max-width: 768px)
+  .feedback__container
+    max-width: 580px
+    width: 90%
+ 
 
 
  

@@ -923,8 +923,13 @@ img {
   margin-bottom: 207px;
 }
 
+.slide {
+  outline: 0;
+}
+
 .slider {
   padding-top: 180px;
+  outline: 0;
 }
 
 .slider-button {
@@ -1050,6 +1055,7 @@ img {
   width: 377px;
   height: 236px;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .service-card:hover .service-card__image {
@@ -1065,6 +1071,7 @@ img {
   display: block;
   position: absolute;
   text-align: center;
+  bottom: 70px;
 }
 
 .service-card:hover .service-card__description-new p {
@@ -1086,6 +1093,7 @@ img {
 .service-card__description {
   position: absolute;
   text-align: center;
+  bottom: 70px;
 }
 
 .service-card__description-new {
@@ -1098,12 +1106,13 @@ img {
   line-height: 26px;
   max-width: 295px;
   color: #ffffff;
+  margin-bottom: 25px;
 }
 
 .service-card__button {
   font-size: 15px;
   text-transform: uppercase;
-  padding: 11px 19px;
+  padding: 9px 19px;
 }
 
 @media (max-width: 1200px) {
@@ -1131,6 +1140,12 @@ img {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin-bottom: 70px;
+  }
+  .service-card__description {
+    bottom: 30px;
+  }
+  .service-card:hover .service-card__description-new {
+    bottom: 30px;
   }
 }
 
@@ -1162,6 +1177,10 @@ img {
   margin-top: -17px;
 }
 
+.about-list {
+  margin-top: 20px;
+}
+
 .about-list__item {
   margin-bottom: 65px;
   display: -webkit-box;
@@ -1175,13 +1194,24 @@ img {
 .about-list__number {
   font-family: 'Proxima Nova Black';
   font-size: 35px;
-  font-weight: 700;
-  line-height: 25px;
   color: #ffc800;
-  text-align: center;
+  vertical-align: top;
+  display: block;
   position: relative;
   margin-right: 67px;
-  width: 10px;
+  width: 20px;
+}
+
+.about-list__number:nth-child(1) {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.about-list__number:nth-child(2) {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
 }
 
 .about-list__number:after {
@@ -1195,7 +1225,6 @@ img {
 }
 
 .about-list__text {
-  margin-top: 5px;
   font-size: 20px;
   line-height: 25px;
   color: #020202;
@@ -1303,10 +1332,15 @@ img {
 .feedback {
   background-color: #010101;
   padding-bottom: 0;
+  margin-top: 115px;
 }
 
 .feedback__slider {
   margin-bottom: 100px;
+}
+
+.feedback__slide {
+  outline: 0;
 }
 
 .feedback-card {
@@ -1321,6 +1355,12 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  outline: 0;
+}
+
+.feedback__container {
+  width: 1350px;
+  margin: auto;
 }
 
 .card-image {
@@ -1373,6 +1413,30 @@ img {
   }
   .feedback__slider {
     margin-bottom: 40px;
+  }
+  .feedback__container {
+    max-width: 550px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .feedback__container {
+    width: 970px;
+  }
+}
+
+@media (max-width: 992px) {
+  .feedback__container {
+    max-width: 750px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .feedback__container {
+    max-width: 580px;
+    width: 90%;
   }
 }
 
@@ -1476,7 +1540,7 @@ img {
 
 .contacts-block {
   position: absolute;
-  left: 8%;
+  left: 19%;
   top: 20%;
   width: 397px;
   background-color: #ffffff;
